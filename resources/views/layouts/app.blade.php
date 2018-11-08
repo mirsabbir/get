@@ -71,7 +71,7 @@
                       @else
                         <li><a href="/profile">Dashboard</a></li>
                         <li><a href="/inbox">Inbox</a></li>
-                        <li><a href="/credit">Earn({{\Auth::user()->credit}})</a></li>
+                        <li><a href="#">Earn({{\Auth::user()->credit}})</a></li>
                       @endguest
                       @if(session('cart'))
                         <li><a href="/cart" id="cart">Cart({{count(session('cart'))}})</a></li>

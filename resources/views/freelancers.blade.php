@@ -95,7 +95,7 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
         <div class="col-xs-12 col-sm-12 col-md-2">
             <ul class="meta-search">
                 <li><i class="glyphicon glyphicon-calendar"></i> <span>name</span></li>
-                <li><i class="glyphicon glyphicon-time"></i> <span>{{$user->name}}</span></li>
+                <li><i class="glyphicon glyphicon-time"></i> <span><a href="/profile/{{$user->id}}">{{$user->name}}</a> </span></li>
                 <li><i class="glyphicon glyphicon-tags"></i> <span></span></li>
             </ul>
         </div>
