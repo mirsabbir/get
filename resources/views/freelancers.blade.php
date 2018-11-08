@@ -90,13 +90,13 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
 <section class="col-xs-12 col-sm-6 col-md-12">
     <article class="search-result row">
         <div class="col-xs-12 col-sm-12 col-md-3">
-            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="{{asset($user->image)}}" alt="Lorem ipsum" /></a>
+            <a href="#" title="Lorem ipsum" class="thumbnail"><img height=80 width=80 src="{{asset($user->image)}}" alt="Lorem ipsum" /></a>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-2">
             <ul class="meta-search">
                 <li><i class="glyphicon glyphicon-calendar"></i> <span>name</span></li>
-                <li><i class="glyphicon glyphicon-time"></i> <span>join date</span></li>
-                <li><i class="glyphicon glyphicon-tags"></i> <span>Rating</span></li>
+                <li><i class="glyphicon glyphicon-time"></i> <span>{{$user->name}}</span></li>
+                <li><i class="glyphicon glyphicon-tags"></i> <span></span></li>
             </ul>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
