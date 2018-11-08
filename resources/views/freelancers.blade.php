@@ -86,6 +86,7 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
     <!-- <h2 class="lead"><strong class="text-danger">3</strong> results were found for the search for <strong class="text-danger">Lorem</strong></h2>								 -->
 </hgroup>
 
+@foreach($users as $user)
 <section class="col-xs-12 col-sm-6 col-md-12">
     <article class="search-result row">
         <div class="col-xs-12 col-sm-12 col-md-3">
@@ -109,6 +110,8 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
     	
 
 </section>
+@endforeach
+
 </div>
 
 @endsection
