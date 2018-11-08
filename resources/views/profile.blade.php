@@ -28,7 +28,7 @@
 		            <div class="row">
 		                <div class="col-md-12">
 		                    <div class="row">
-                          <div class="col"><h4>Profile</h4> </div>
+                          <div class="col"><h4> {{$user->name}}</h4> </div>
                           <div class="col float-right"><img style="border-radius:50%;" src="{{asset(\Auth::user()->image)}}" alt="" height=50 width=50></div>
                         </div>
                         

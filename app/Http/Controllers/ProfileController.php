@@ -13,7 +13,9 @@ class ProfileController extends Controller
     }
     public function index()
     {
-        return view('profile');
+        return view('profile')->with([
+            'user' => \Auth::user(),
+        ]);
     }
     public function user(User $user)
     {   

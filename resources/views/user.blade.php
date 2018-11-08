@@ -47,69 +47,41 @@
             </div>
             <div class="panel panel-default target">
                
-                <div class="panel-body">
-                  <div class="row">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="300x200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/UPMCEast_CTscan.jpg/280px-UPMCEast_CTscan.jpg">
-						<div class="caption">
-							<h3>
-								Computed Tomography Scan
-							</h3>
-							<p>
-								For potential transcatheter repair and replacement of heart valves 
-							</p>
-							<p>
-							
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="300x200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEQz__ycuhuAoNISn3rNWuaZhhzH4lAnPg0IvmQXJpkN08pC5oZA">
-						<div class="caption">
-							<h3>
-								Counselling Service
-							</h3>
-							<p>
-								For stability of emotional threshold throughout the battery of tests
-							</p>
-							<p>
-							
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="300x200" src="https://assets.nhs.uk/prod/images/C0097883.2e16d0ba.fill-920x613.jpg">
-						<div class="caption">
-							<h3>
-								Cardiac Catheterization
-							</h3>
-							<p>
-								For further evaluation of other implicitly acquired cardiovascular conditions
-							</p>
-							<p>
-							
-							</p>
-						</div>
-                </div>
-                 
+                
+				
             </div>
-                     
+            @foreach($user->posts as $post)
+            <div class="col-md-4">
+	<figure class="card card-product">
+		<div class="img-wrap"><img src="{{asset($post->image)}}"></div>
+		<figcaption class="info-wrap">
+				<h4 class="title">{{$post->title}}</h4>
+				<p class="desc">{{$post->details}}</p>
+				<div class="rating-wrap">
+					<div class="label-rating"><a href="/profile/{{$post->user->id}}">{{$post->user->name}}</a></div>
+                    <br>
+					<div class="label-rating">{{$post->created_at}}</div>
+				</div> <!-- rating-wrap.// -->
+		</figcaption>
+		<div class="bottom-wrap">
+            <form action="/addcart" method="post">
+                @csrf
+                <input type="hidden" name="item" id="" value="{{$post->id}}">
+                <button class="btn btn-sm btn-primary float-right">Order Now</button>
+            </form>
+			<div class="price-wrap h5">
+				<span class="price-new">${{$post->price}}</span> 
+			</div> <!-- price-wrap.// -->
+		</div> <!-- bottom-wrap.// -->
+	</figure>
+</div> <!-- col // -->  
+@endforeach
             </div>
                  
         </div>
               
     </div>
-           <div class="panel panel-default">
-                <div class="panel-heading"><b>Daily Medication and Treatment Breakdown:</b></div>
-                <div class="panel-body"> Textual, descriptive form of the above checklist
-                <br><button type="button" class="btn btn-primary">Generate Report
-
-                </div>
+           
 </div></div>
                 
 </div>
