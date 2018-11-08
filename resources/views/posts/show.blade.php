@@ -19,7 +19,7 @@
               <div class="card mb-4 box-shadow">
                 <a href="/posts/{{$post->id}}"><img class="card-img-top"src="{{asset($post->image)}}" alt="Card image cap"></a>
                 <div class="card-body">
-                  <p class="card-text">$post->details</p>
+                  <p class="card-text">{{$post->details}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <form action="/posts/{{$post->id}}/edit">

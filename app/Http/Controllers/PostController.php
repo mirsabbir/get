@@ -20,7 +20,7 @@ class PostController extends Controller
      */
     public function index()
     {   
-        $posts = \Auth::user()->posts();
+        $posts = \Auth::user()->posts()->get();
         return view('posts.show')->with(['posts'=>$posts]);
     }
 
