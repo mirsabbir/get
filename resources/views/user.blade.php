@@ -14,7 +14,7 @@
           </form>
 <br>
         </div>
-      <div class="col-sm-2"><a href="/profile/{{$user->id}}" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBG685vI07-3MsuqJxjCfzIabfFJJG-8yM-ppvjjNpD5QNtWNE4A"></a>
+      <div class="col-sm-2"><a href="/profile/{{$user->id}}" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="{{$user->image}}"></a>
 
         </div>
     </div>
@@ -24,67 +24,29 @@
             <!--left col-->
             <ul class="list-group">
                 <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Name: </strong></span> Joaquin Buenaobra</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Medical License Number: </strong></span> MNL09-F1SK5</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Address: </strong></span> Ermita, Manila</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> "jwbuenaobra@hotmail.com"</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Birthday: </strong></span>3 May 1981</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Age: </strong></span>37</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span>M</li>
-                <li class="list-group-item text-muted" contenteditable="false">Contact Details</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Telephone Number: </strong></span>       514-1132</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Cellphone Number: </strong></span>09159092245</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Name: </strong></span> {{$user->name}}</li>
                 
-            </ul>
-           <div class="panel panel-default">
+                
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> {{$user->email}}</li>
+                
+                
              
-             <div class="panel-heading">Reminders:
-
-                </div>
-                <div class="panel-body"><button type="button" class="btn btn-info">Patient Compliance<br><button type="button" class="btn btn-secondary">Approve Uploads
                 
-
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">NOTIFICATIONS <i class="fa fa-link fa-1x"></i>
-
-                </div>
-                <div class="panel-body"><a href="http://bootply.com" class="">~Non-compliance to certain checklist items~</a>
-
-                </div>
-            </div>
-          
-            <ul class="list-group">
-                <li class="list-group-item text-muted">PATIENT LIBRARY<i class="fa fa-dashboard fa-1x"></i>
-
-                </li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="https://bootsnipp.com/user/snippets/Gavb2">Justine Tan</a></strong></span></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="#">Chris Poernomo</a></strong></span></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="#">Warren Monsod</a></strong></span> </li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="#">Zysa del Mundo</a></strong></span></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class=""><button type="button" class="btn btn-info">Schedule Patient</strong></span></li>
             </ul>
+         
+           
+          
             
-            <div class="panel panel-default">
-                <div class="panel-heading">UPLOADED MEDICAL-RELATED DOCUMENTS</div>
-                <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i> 
-                    <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
-
-                </div>
-            </div>
         </div>
         <!--/col-3-->
         <div class="col-sm-9" style="" contenteditable="false">
             <div class="panel panel-default">
-                <div class="panel-heading"><b>Shared Treatment Section</b></div>
-                <div class="panel-body"><i>Select the plan corresponding to your need. You will be redirected to the access page where you can edit the selected pre-made scheme.</i><br>
-                <button type="button" class="btn btn-primary">Treatment Plan A</button>   <button type="button" class="btn btn-primary">Treatment Plan B</button>   <button type="button" class="btn btn-primary">Treatment Plan C</button>   <button type="button" class="btn btn-primary">Treatment Plan D</button>   <button type="button" class="btn btn-Primary">Create Plan</button>
+                
 
                 </div>
             </div>
             <div class="panel panel-default target">
-                <div class="panel-heading" contenteditable="false"><b>Treatments and Medications Needed</b></div>
+               
                 <div class="panel-body">
                   <div class="row">
 				<div class="col-md-4">

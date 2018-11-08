@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class FileController extends Controller
 {
     public function index(Request $request,\App\User $user){
-        $f = new \App\file;
+        $f = new \App\File;
         $file = $request->file('file');
         $file->move('uploads', $file->getClientOriginalName());
         $f->name = 'uploads/'.$file->getClientOriginalName();
