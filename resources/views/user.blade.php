@@ -14,7 +14,7 @@
           </form>
 <br>
         </div>
-      <div class="col-sm-2"><a href="/profile/{{$user->id}}" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="{{$user->image}}"></a>
+      <div class="col-sm-2"><a href="/profile/{{$user->id}}" height=90 width=90 class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="{{$user->image}}"></a>
 
         </div>
     </div>
