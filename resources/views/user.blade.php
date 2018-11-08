@@ -47,10 +47,7 @@
             </div>
             <div class="panel panel-default target">
                
-                
-				
-            </div>
-            @foreach($user->posts as $post)
+                 @foreach($user->posts as $post)
             <div class="col-md-4">
 	<figure class="card card-product">
 		<div class="img-wrap"><img src="{{asset($post->image)}}"></div>
@@ -76,6 +73,9 @@
 	</figure>
 </div> <!-- col // -->  
 @endforeach
+				
+            </div>
+           
             </div>
                  
         </div>

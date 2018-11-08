@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home')->with([
-            'posts' => \App\Post::take(12)->with('user')->get(),
+            'posts' => \App\Post::take(12)->with('user')->orderBy('created_at','desc')->get(),
         ]);
     }
 }
