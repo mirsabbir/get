@@ -89,7 +89,7 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
 <section class="col-xs-12 col-sm-6 col-md-12">
     <article class="search-result row">
         <div class="col-xs-12 col-sm-12 col-md-3">
-            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum" /></a>
+            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="{{asset($user->image)}}" alt="Lorem ipsum" /></a>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-2">
             <ul class="meta-search">
@@ -100,7 +100,7 @@ hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; 
         </div>
         <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
             <h3><a href="#" title="">heading</a></h3>
-            <p> details Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit, distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus doloremque.</p>						
+            <p> {{$user->details}}</p>						
             
         </div>
         <span class="clearfix borda"></span>

@@ -8,7 +8,9 @@ class FreelancersController extends Controller
 {
     public function index(){
 
-        return view('freelancers');
+        return view('freelancers')->with([
+            'users' => \App\User::all(),
+        ]);
 
     }
 }
